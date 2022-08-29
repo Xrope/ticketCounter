@@ -17,10 +17,6 @@ function saveNumber(event) {
 
     const input = document.querySelector(".numberOfTickets")
     let numberOfTickets = input.value;
-    // input.classList.add('invisible')
-    // input.parentElement.parentElement.removeChild(input.parentElement);
-    // savebutton.parentElement.removeChild(savebutton);
-    // savebutton.classList.add('invisible')
 
     let label = document.querySelector('label')
     label.innerHTML = `Det är ${numberOfTickets} lotter sparat`
@@ -28,6 +24,19 @@ function saveNumber(event) {
     for (let index = 1; index < numberOfTickets; index++) {
         ticketsLeft.push(index);  
     }
+    savebutton.parentElement.parentElement.removeChild(savebutton.parentElement);
+    const resultsDiv = document.querySelector('.results');
+    resultsDiv.classList.remove('d-none');
+    // let p = document.createElement('p');
+    // p.innerHTML = `Antal lotter ${numberOfTickets}`;
+    // resultsDiv.insertBefore(p, resultsDiv.firstChild);
+
+     let succesAlert = document.createElement('div');
+     succesAlert.classList.add('alert');
+     succesAlert.classList.add('alert-success');
+     succesAlert.innerHTML = `Det är ${numberOfTickets} lotter sparat.`
+    //  succesAlert.setAtribute('role', 'alert');
+     document.getElementById('wrapper').insertBefore(succesAlert, resultsDiv);
 }
 
 function drawNumber(event){
@@ -35,7 +44,7 @@ function drawNumber(event){
         let li = document.createElement('li');
         li.innerHTML = winningNumber;
         li.classList.add('list-group-item')
-        numberDrawnList.prepend(li);
+        numberDrawnList.append(li);
     }
     let indexOfWinningNumber = Math.floor(Math.random() * ticketsLeft.length);
     winningNumber = ticketsLeft[indexOfWinningNumber];

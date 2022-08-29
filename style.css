@@ -7,22 +7,38 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(215, 215, 215);
 }
 
 #wrapper{
-    background-color: rgb(243, 243, 243);
+    /* background-color: rgb(243, 243, 243);
     padding: 2rem;
     border: 2px solid rgb(75, 75, 75);
-    border-radius: 10px;
+    border-radius: 10px; */
     width: 30rem;
     
   
+}
+
+.setup{
+
+    padding: 2rem;
+    border: 2px solid rgb(75, 75, 75);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    background-color: rgb(243, 243, 243);
+
 }
 
 .results{
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    background-color: rgb(243, 243, 243);
+    padding: 2rem;
+    border: 2px solid rgb(75, 75, 75);
+    border-radius: 10px;
 }
 
 h1{
@@ -35,8 +51,14 @@ ul{
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
-    height: 15rem;
+    height: 20rem;
     
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 li {
