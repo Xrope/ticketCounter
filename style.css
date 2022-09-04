@@ -76,3 +76,9 @@ input[type=number]::-webkit-outer-spin-button {
 li {
     max-width: 60px;
 }
+
+@media screen and (max-width: 600px){
+    #wrapper{
+        width: 90%;
+    }
+}
