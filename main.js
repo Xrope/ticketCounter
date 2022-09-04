@@ -27,16 +27,13 @@ function saveNumber(event) {
     savebutton.parentElement.parentElement.removeChild(savebutton.parentElement);
     const resultsDiv = document.querySelector('.results');
     resultsDiv.classList.remove('d-none');
-    // let p = document.createElement('p');
-    // p.innerHTML = `Antal lotter ${numberOfTickets}`;
-    // resultsDiv.insertBefore(p, resultsDiv.firstChild);
 
      let succesAlert = document.createElement('div');
      succesAlert.classList.add('alert');
      succesAlert.classList.add('alert-success');
      succesAlert.innerHTML = `Det är ${numberOfTickets} lotter sparat.`
-    //  succesAlert.setAtribute('role', 'alert');
-     document.getElementById('wrapper').insertBefore(succesAlert, resultsDiv);
+    resultsDiv.prepend(succesAlert);
+    //  document.getElementById('wrapper').insertBefore(succesAlert, resultsDiv);
 }
 
 function drawNumber(event){
@@ -44,6 +41,7 @@ function drawNumber(event){
         let li = document.createElement('li');
         li.innerHTML = winningNumber;
         li.classList.add('list-group-item')
+        li.classList.add('list-group-item-light')
         numberDrawnList.append(li);
     }
     let indexOfWinningNumber = Math.floor(Math.random() * ticketsLeft.length);
