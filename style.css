@@ -8,7 +8,7 @@ main{
     justify-content: center;
     align-items: center;
     background-color: rgb(215, 215, 215);
-
+    padding: 2rem;
 }
 .results h1, .alert{
     margin: 0;
@@ -79,7 +79,17 @@ li {
 }
 
 @media screen and (max-width: 800px){
-    #wrapper{
-        width: 90%;
+    main{
+        padding: 0;
     }
+    
+    #wrapper{
+        width: 100%;
+        min-height: 100%;
+    }
+
+    .setup{
+        margin: 2rem 0.5rem 0;
+    }
+
 }
